@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xác thực bí mật</title>
+  <title>Kiểm tra mật khẩu</title>
   <style>
     body {
       background-color: white;
@@ -58,13 +58,13 @@
   <button id="enterBtn">Enter</button>
 
   <script>
-    const correctAnswers = ["Nhan0904", "Ngoc2805", "My2105"];
+    const correctAnswers = ["Ngoc2805", "My2105"];
     const input = document.getElementById("input");
     const button = document.getElementById("enterBtn");
 
     // Kiểm tra cấm vĩnh viễn
     if (localStorage.getItem("banned") === "true") {
-      document.body.innerHTML = "<h2 style='color:red; font-family:monospace;'>Bạn đã bị cấm vĩnh viễn truy cập trang này.</h2>";
+      document.body.innerHTML = "<h2 style='color:red; font-family:monospace;'>Mày sẽ không thể vào lại trang này nữa đâu!</h2>";
     } else {
       let attempts = 0;
 
@@ -79,7 +79,7 @@
           else if (attempts === 3) alert("Sai 1 lần nữa là cấm vĩnh viễn");
           else if (attempts >= 4) {
             localStorage.setItem("banned", "true");
-            alert("Bạn đã bị cấm vĩnh viễn truy cập trang này.");
+            alert("Mày sẽ không thể vào lại trang này nữa đâu!");
             location.reload();
           }
         }
