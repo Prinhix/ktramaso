@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kiểm tra mật khẩu</title>
+  <title>Kiểm tra mã số</title>
   <style>
     body {
       background-color: white;
@@ -75,7 +75,7 @@
         } else {
           attempts++;
           if (attempts === 1) alert("Kiểm tra lại xem nào");
-          else if (attempts === 2) alert("Mày có phải là người không hiểu ít nhất 1 trong 3 số trên đúng không?");
+          else if (attempts === 2) alert("Mày có phải là người không hiểu ít nhất 1 trong 2 số trên đúng không?");
           else if (attempts === 3) alert("Sai 1 lần nữa là cấm vĩnh viễn");
           else if (attempts >= 4) {
             localStorage.setItem("banned", "true");
